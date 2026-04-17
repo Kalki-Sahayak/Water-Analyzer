@@ -1,2 +1,2 @@
 # Water-Analyzer
-This is a Final Year PRoject
+This is a Final Year Project
