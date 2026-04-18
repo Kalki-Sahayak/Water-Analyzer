@@ -58,11 +58,11 @@ model_pipeline.fit(X_train, y_train)
 joblib.dump(model_pipeline, 'rf_model.pkl')
 print("Random Forest pipeline saved successfully to 'rf_model.pkl'!")
 
-# probabilities = model_pipeline.predict_proba(X_test)[:, 1]
-# STRICT_THRESHOLD = 0.95
-# y_pred = (probabilities >= STRICT_THRESHOLD).astype(int)
+probabilities = model_pipeline.predict_proba(X_test)[:, 1]
+STRICT_THRESHOLD = 0.95
+y_pred = (probabilities >= STRICT_THRESHOLD).astype(int)
 
-y_pred = model_pipeline.predict(X_test)
+# y_pred = model_pipeline.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 
 
